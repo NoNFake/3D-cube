@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
+
 <head>
+    <link rel="stylesheet" href="index.css">
     <style>
         @keyframes turn {
             from {
@@ -13,61 +18,66 @@
         }
         
         .cube {
-            width: 20px;
-            height: 20px;
+            width: 40%;
+            height: -40%;
             transform-style: preserve-3d;
-            animation: turn 1s linear infinite;
-            margin: 50px;
+            animation: turn 4s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
         }
         
         .face {
-            width: 100px;
-            height: 100px;
-            background: #ffffff;
+            width: 200px;
+            height: 200px;
+            background: #000000;
             border: 1px solid;
             position: absolute;
             opacity: 8.75;
-            transform: translateZ(50px);
-            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4;
+            transform: translateZ(100px);
+            box-shadow: 0 0 10px #6f009b, 0 0 10px #6f009b, 0 0 8px #6f009b, 0 0 20px #6f009b;
         }
         
         .front {
-            transform: translateZ(50px);
+            transform: translateZ(100px);
         }
         
         .back {
-            transform: rotateZ(-50px) rotateY(180deg);
+            transform: rotateZ(-100px) rotateY(180deg);
         }
         
         .left {
-            transform: translateX(-50px) rotateY(-90deg);
+            transform: translateX(-100px) rotateY(-90deg);
         }
         
         .right {
-            transform: translateX(50px) rotateY(90deg);
+            transform: translateX(100px) rotateY(90deg);
         }
         
         .top {
-            transform: translateY(50px) rotateX(90deg);
+            transform: translateY(100px) rotateX(90deg);
         }
         
         .bottom {
-            transform: translateY(50px) rotateX(-90deg);
+            transform: translateY(100px) rotateX(-90deg);
         }
         
         .pon {
-            transform: translateY(-50px) rotateX(90deg);
+            transform: translateY(-100px) rotateX(90deg);
         }
         
         .unfront {
-            transform: translateZ(-50px);
+            transform: translateZ(-100px);
         }
     </style>
     <title>heh</title>
 </head>
 
 <body>
-    <h1>3D cube</h1>
+
+
     <div class="cube">
         <div class="face top"></div>
         <div class="face bottom"></div>
@@ -83,5 +93,11 @@
 
     </div>
 </body>
+
+
+
+<div class="space">
+    <script src="index.js"></script>
+</div>
 
 </html>
